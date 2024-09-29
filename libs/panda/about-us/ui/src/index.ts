@@ -1,1 +1,2 @@
-export * from './lib/panda-about-us-ui/panda-about-us-ui.component';
+/* Pages */
+export * from './lib/pages/about-us-page/about-us-page.component';
