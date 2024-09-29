@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { AuthenticationPageComponent } from '@panda/panda/authentication/ui';
 
 @Component({
   selector: 'lib-authentication',
   standalone: true,
-  imports: [],
+  imports: [AuthenticationPageComponent],
   templateUrl: './authentication.component.html',
   styleUrl: './authentication.component.scss'
 })
