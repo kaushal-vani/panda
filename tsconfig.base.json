@@ -35,6 +35,7 @@
       "@panda/panda/home/ui": ["libs/panda/home/ui/src/index.ts"],
       "@panda/panda/payment/smart": ["libs/panda/payment/smart/src/index.ts"],
       "@panda/panda/payment/ui": ["libs/panda/payment/ui/src/index.ts"],
+      "@panda/panda/products/ui": ["libs/panda/products/ui/src/index.ts"],
       "@panda/panda/shared": ["libs/panda/shared/src/index.ts"]
     }
   },
