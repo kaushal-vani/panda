@@ -1,1 +1,2 @@
-export * from './lib/panda-about-us-smart/panda-about-us-smart.component';
+/* Entry Components */
+export * from './lib/entry-components/about-us/about-us.component';
