@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@panda/panda/authentication/smart": [
+        "libs/panda/authentication/smart/src/index.ts"
+      ],
       "@panda/panda/shared": ["libs/panda/shared/src/index.ts"]
     }
   },
