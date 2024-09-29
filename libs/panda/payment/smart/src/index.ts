@@ -1,1 +1,2 @@
-export * from './lib/panda-payment-smart/panda-payment-smart.component';
+/* Entry Components */
+export * from './lib/entry-components/payment/payment.component';
