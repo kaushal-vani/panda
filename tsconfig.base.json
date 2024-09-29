@@ -23,6 +23,9 @@
       "@panda/panda/authentication/ui": [
         "libs/panda/authentication/ui/src/index.ts"
       ],
+      "@panda/panda/check-out/smart": [
+        "libs/panda/check-out/smart/src/index.ts"
+      ],
       "@panda/panda/shared": ["libs/panda/shared/src/index.ts"]
     }
   },
