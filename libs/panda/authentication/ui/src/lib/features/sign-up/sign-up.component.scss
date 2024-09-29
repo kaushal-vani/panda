@@ -1,0 +1,40 @@
+.sign-up-form {
+    margin-bottom: 1em;
+  }
+  
+  .sign-up-form__label {
+    display: block;
+  }
+  
+  .sign-up-form {
+    width: 100%;
+    &__input {
+      margin-top: 0.5em;
+      margin-bottom: 0.75em;
+    }
+    &__button {
+      margin-top: 0.75em;
+      margin-bottom: 0.75em;
+    }
+  }
+  
+  .sign-up-form__error {
+    color: red;
+    font-size: 0.8em;
+    margin-bottom: 0.75em;
+  }
+  
+  .sign-up-form__link {
+    margin-left: 5px;
+    color: cornflowerblue;
+    cursor: pointer;
+  }
+  
+  .text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0.5em;
+  }
+  
