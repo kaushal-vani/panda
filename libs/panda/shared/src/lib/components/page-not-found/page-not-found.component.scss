@@ -1,0 +1,40 @@
+.not-found-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw;  /* Full viewport width */
+    text-align: center; /* Center text */
+  }
+  
+  .not-found-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  
+    h1 {
+      font-size: 2.5rem;
+      margin: 1rem 0;
+    }
+  
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .icon {
+      font-size: 4rem;
+      color: var(--yellow-500); /* PrimeNG color */
+      margin-bottom: 1rem;
+    }
+  
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 3rem; /* Adjust heading for larger screens */
+      }
+      p {
+        font-size: 1.5rem; /* Adjust paragraph for larger screens */
+      }
+    }
+  }
