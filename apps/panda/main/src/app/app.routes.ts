@@ -6,6 +6,7 @@ import { FeedBackComponent } from '@panda/panda/feed-back/smart';
 import { HomeComponent } from '@panda/panda/home/smart';
 import { PaymentComponent } from '@panda/panda/payment/smart';
 import { ProductsComponent } from '@panda/panda/products/smart';
+import { PageNotFoundComponent } from '@panda/panda/shared';
 
 export const appRoutes: Route[] = [
   { path: 'about-us', component: AboutUsComponent },
@@ -16,5 +17,5 @@ export const appRoutes: Route[] = [
   { path: 'payment', component: PaymentComponent },
   { path: 'products', component: ProductsComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', redirectTo: '/payment', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent},
 ];
