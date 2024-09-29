@@ -1,0 +1,10 @@
+{
+  "name": "panda-main-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/panda/main-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["panda-main"],
+  "// targets": "to see all targets run: nx show project panda-main-e2e --web",
+  "targets": {}
+}
