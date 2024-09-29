@@ -1,1 +1,2 @@
-export * from './lib/panda-home-smart/panda-home-smart.component';
+/* Entry Components */
+export * from './lib/entry-components/home/home.component';
