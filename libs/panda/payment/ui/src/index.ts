@@ -1,1 +1,2 @@
-export * from './lib/panda-payment-ui/panda-payment-ui.component';
+/* Pages */
+export * from './lib/pages/payment-page/payment-page.component';
