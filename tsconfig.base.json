@@ -27,6 +27,9 @@
         "libs/panda/check-out/smart/src/index.ts"
       ],
       "@panda/panda/check-out/ui": ["libs/panda/check-out/ui/src/index.ts"],
+      "@panda/panda/feed-back/smart": [
+        "libs/panda/feed-back/smart/src/index.ts"
+      ],
       "@panda/panda/feed-back/ui": ["libs/panda/feed-back/ui/src/index.ts"],
       "@panda/panda/shared": ["libs/panda/shared/src/index.ts"]
     }
