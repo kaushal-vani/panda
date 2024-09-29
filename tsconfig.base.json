@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@panda/panda/about-us/smart": ["libs/panda/about-us/smart/src/index.ts"],
       "@panda/panda/about-us/ui": ["libs/panda/about-us/ui/src/index.ts"],
       "@panda/panda/authentication/smart": [
         "libs/panda/authentication/smart/src/index.ts"
