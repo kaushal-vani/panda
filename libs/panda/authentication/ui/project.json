@@ -15,6 +15,55 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint"
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "libs/panda/authentication/ui/.storybook",
+        "browserTarget": "panda-authentication-ui:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/panda-authentication-ui",
+        "configDir": "libs/panda/authentication/ui/.storybook",
+        "browserTarget": "panda-authentication-ui:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "test-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c libs/panda/authentication/ui/.storybook --url=http://localhost:4400"
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "dependsOn": ["build-storybook"],
+      "options": {
+        "buildTarget": "panda-authentication-ui:build-storybook",
+        "staticFilePath": "dist/storybook/panda-authentication-ui",
+        "spa": true
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "panda-authentication-ui:build-storybook:ci"
+        }
+      }
     }
   }
 }
