@@ -16,6 +16,7 @@ export const appRoutes: Route[] = [
   { path: 'home', component: HomeComponent },
   { path: 'payment', component: PaymentComponent },
   { path: 'products', component: ProductsComponent },
+  { path: 'products/sale', component: FeedBackComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent},
 ];
