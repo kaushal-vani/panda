@@ -1,1 +1,65 @@
-<p>payment-details works!</p>
+<h2>Payment Details</h2>
+<form [formGroup]="paymentForm" (ngSubmit)="onComplete()">
+  <div class="p-fluid grid formgrid">
+    <div class="field col-12 md:col-6">
+      <label for="cardNumber">Card Number</label>
+      <p-inputMask 
+        id="cardNumber" 
+        mask="9999-9999-9999-9999" 
+        formControlName="cardNumber" 
+        placeholder="0000-0000-0000-0000" 
+        [autoClear]="false">
+      </p-inputMask>
+      <div *ngIf="isFieldInvalid('cardNumber')" class="error-message">
+        Enter a valid 16-digit card number.
+      </div>
+    </div>
+
+    <div class="field col-12 md:col-6">
+      <label for="cardHolderName">Card Holder Name</label>
+      <input
+        id="cardHolderName"
+        type="text"
+        pInputText
+        formControlName="cardHolderName"
+        placeholder="Enter card holder's name"
+      />
+      <div *ngIf="isFieldInvalid('cardHolderName')" class="error-message">
+        Card holder's name is required.
+      </div>
+    </div>
+
+    <div class="field col-12 md:col-6">
+      <label for="expiryDate">Expiry Date</label>
+      <input
+        id="expiryDate"
+        type="text"
+        pInputText
+        formControlName="expiryDate"
+        placeholder="MM/YY"
+      />
+      <div *ngIf="isFieldInvalid('expiryDate')" class="error-message">
+        Expiry date is required.
+      </div>
+    </div>
+
+    <div class="field col-12 md:col-6">
+      <label for="cvv">CVV</label>
+      <input
+        id="cvv"
+        type="text"
+        pInputText
+        formControlName="cvv"
+        placeholder="CVV"
+      />
+      <div *ngIf="isFieldInvalid('cvv')" class="error-message">
+        CVV is required.
+      </div>
+    </div>
+  </div>
+
+  <div class="button-group">
+    <button pButton type="button" label="Back" class="p-mt-2" (click)="onPrevious()"></button>
+    <button pButton type="submit" label="Complete Checkout" class="p-mt-2"></button>
+  </div>
+</form>
