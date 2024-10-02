@@ -38,6 +38,7 @@
       "@panda/panda/products/smart": ["libs/panda/products/smart/src/index.ts"],
       "@panda/panda/products/ui": ["libs/panda/products/ui/src/index.ts"],
       "@panda/panda/profile/smart": ["libs/panda/profile/smart/src/index.ts"],
+      "@panda/panda/profile/ui": ["libs/panda/profile/ui/src/index.ts"],
       "@panda/panda/shared": ["libs/panda/shared/src/index.ts"]
     }
   },
