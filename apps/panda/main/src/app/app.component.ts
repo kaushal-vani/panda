@@ -6,7 +6,13 @@ import { HeaderComponent, NavigationBotComponent } from '@panda/panda/shared';
 
 @Component({
   standalone: true,
-  imports: [CommonModule, RouterModule, HeaderComponent, NavigationBotComponent, FeedBackOverlayComponent],
+  imports: [
+    CommonModule,
+    RouterModule,
+    HeaderComponent,
+    NavigationBotComponent,
+    FeedBackOverlayComponent,
+  ],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
