@@ -23,8 +23,8 @@ export class NavigationBotComponent {
   isChatbotVisible = false;
   userMessages: string[] = [];
   botMessages: string[] = [];
-  initialMessage = 'initialMessage';
-  selectedOption = 'Hello! How can I assist you today?';
+  initialMessage = 'Hello! Which Page do you want to navigate to ?';
+  selectedOption = 'Hello! Which Page do you want to navigate to ?';
 
   navigationOptions = [
     { label: 'Home', path: '/home' },
@@ -40,7 +40,7 @@ export class NavigationBotComponent {
     if (this.isChatbotVisible) {
       this.userMessages = [];
       this.botMessages = [];
-      this.initialMessage = 'Hello! How can I assist you today?';
+      this.initialMessage = 'Hello! Which Page do you want to navigate to ?';
     }
   }
   closeChatbot() {
@@ -57,8 +57,7 @@ export class NavigationBotComponent {
         this.botMessages.push(`Navigating to ${optionLabel}...`);
         setTimeout(() => {
           this.router.navigate([selectedOption.path]);
-          this.botMessages.push('Thank you for using our bot!');
-          setTimeout(() => this.closeChatbot(), 2000);
+          setTimeout(() => this.closeChatbot(), 500);
         }, 1000);
       }, 500);
     }
