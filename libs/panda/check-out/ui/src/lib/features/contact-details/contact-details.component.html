@@ -1,1 +1,36 @@
-<p>contact-details works!</p>
+<h2>Contact Details</h2>
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <div class="p-fluid grid formgrid">
+    <div class="field col-12 md:col-6">
+      <label for="name">Name</label>
+      <input
+        id="name"
+        type="text"
+        pInputText
+        formControlName="name"
+        placeholder="Enter your name"
+      />
+      <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="error-message">
+        Name is required.
+      </div>
+    </div>
+    <div class="field col-12 md:col-6">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        pInputText
+        formControlName="email"
+        placeholder="Enter your email"
+      />
+      <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="error-message">
+        Enter a valid email address.
+      </div>
+    </div>
+  </div>
+  
+  <!-- Wrap the button in a div with the class button-container -->
+  <div class="button-container">
+    <button pButton type="submit" label="Next" class="p-mt-2"></button>
+  </div>
+</form>

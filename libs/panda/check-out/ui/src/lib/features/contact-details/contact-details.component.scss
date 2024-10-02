@@ -1,0 +1,49 @@
+h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.formgrid {
+  margin-bottom: 20px;
+
+  .field {
+    margin-bottom: 16px;
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #666;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+
+      &:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+    }
+
+    .error-message {
+      color: #ff4d4f;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+  }
+}
+
+// Center the button by wrapping it in a flex container
+.button-container {
+  display: flex;
+  justify-content: center;  // Center the button horizontally
+  margin-top: 20px;        // Add some margin at the top
+}
+
+.p-mt-2 {
+  margin-top: 20px;
+}
