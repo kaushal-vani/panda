@@ -6,15 +6,10 @@ import { FeedBackComponent } from '@panda/panda/feed-back/smart';
 import { HomeComponent } from '@panda/panda/home/smart';
 import { PaymentComponent } from '@panda/panda/payment/smart';
 import { ProductsComponent } from '@panda/panda/products/smart';
-import {
-  FeaturedPageComponent,
-  SalePageComponent,
-} from '@panda/panda/products/ui';
+import { FeaturedPageComponent, SalePageComponent } from '@panda/panda/products/ui';
 import { PageNotFoundComponent } from '@panda/panda/shared';
 
 export const appRoutes: Route[] = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'authenticate', component: AuthenticationComponent },
   { path: 'check-out', component: CheckOutComponent },
@@ -22,6 +17,8 @@ export const appRoutes: Route[] = [
   { path: 'home', component: HomeComponent },
   { path: 'payment', component: PaymentComponent },
   { path: 'products', component: ProductsComponent },
-  { path: 'products/featured', component: FeaturedPageComponent },
   { path: 'products/sale', component: SalePageComponent },
+  { path: 'products/featured', component: FeaturedPageComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent},
 ];

@@ -38,7 +38,7 @@ export class HeaderComponent {
   }
 
   goToFeatures() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/products/featured']);
   }
 
   goToSale() {
