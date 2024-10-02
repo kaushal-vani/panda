@@ -2,7 +2,6 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #6e6f75;
   color: white;
   border-radius: 50%;
   width: 60px;
@@ -43,36 +42,45 @@
 }
 
 .chatbot-footer {
-    padding: 10px;
-    background-color: #f1f1f1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .options {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px; /* Add space between options */
-  }
-  
+  padding: 10px;
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.options {
+  display: flex;
+  gap: 10px; /* Space between tags */
+  padding: 8px;
+  background-color: whitesmoke;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  width: auto; /* Auto width to fit the content */
+  max-width: 100%; /* Ensures it doesn't overflow the dialog */
+  box-sizing: border-box;
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+.option {
+  background-color: #e0e0e0;
+  color: #333;
+  border-radius: 15px;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.option:hover {
+  background-color: #d4d4d4; /* Slightly darken on hover */
+}
+
+@media screen and (max-width: 450px) {
   .option {
-    padding: 8px 15px;
-    background-color: #007bff;
-    color: white;
-    border-radius: 20px;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s ease;
+    font-size: 12px; /* Adjust font size for smaller screens */
+    padding: 4px 10px;
   }
-  
-  .option:hover {
-    background-color: #0056b3; /* Darken the button on hover */
-  }
-  
-  @media screen and (max-width: 450px) {
-    .option {
-      padding: 6px 12px; /* Adjust padding for smaller screens */
-    }
-  }
+}

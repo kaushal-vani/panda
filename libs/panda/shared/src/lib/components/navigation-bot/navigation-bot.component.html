@@ -6,7 +6,7 @@
   [draggable]="false" 
   [resizable]="false"
   header="Chat with us"
-  [style]="{width: '300px'}"
+  [style]="{minWidth: '400px', width: 'auto', maxWidth: '90%'}"
   (onHide)="closeChatbot()"
 >
   <div class="chatbot-body">
@@ -25,4 +25,4 @@
 </p-dialog>
 
 <!-- Button to open the chatbot -->
-<button pButton type="button" icon="pi pi-compass" class="chatbot-button" (click)="toggleChatbot()"></button>
+<button pButton type="button" icon="pi pi-map" class="chatbot-button" (click)="toggleChatbot()"></button>
