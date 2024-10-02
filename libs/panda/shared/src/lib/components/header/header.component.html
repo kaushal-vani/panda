@@ -24,10 +24,11 @@
       <li class="h-full">
         <a
           pripple=""
-          class="p-ripple p-element cursor-pointer h-full inline-flex align-items-center text-600 border-left-2 lg:border-left-none lg:border-bottom-2 border-blue-500 transition-colors transition-duration-150 py-3 lg:py-0 px-3"
-        >
-          <span class="pi pi-home mr-2"></span>
-          <span class="font-medium">Home</span>
+          class="p-ripple p-element cursor-pointer h-full inline-flex align-items-center text-600 border-left-2 lg:border-left-none lg:border-bottom-2 border-transparent hover:border-500 transition-colors transition-duration-150 py-3 lg:py-0 px-3"
+          (click)="goToFeatures()"
+          >
+          <span class="pi pi-sparkles mr-2"></span>
+          <span class="font-medium">New & Featured</span>
           <span class="p-ink"></span>
         </a>
       </li>
@@ -35,9 +36,10 @@
         <a
           pripple=""
           class="p-ripple p-element cursor-pointer h-full inline-flex align-items-center text-600 border-left-2 lg:border-left-none lg:border-bottom-2 border-transparent hover:border-500 transition-colors transition-duration-150 py-3 lg:py-0 px-3"
-        >
-          <span class="pi pi-calendar mr-2"></span>
-          <span class="font-medium">Task</span>
+          (click)="goToSale()"
+          >
+          <span class="pi pi-percentage mr-2"></span>
+          <span class="font-medium">Sale</span>
           <span class="p-ink"></span>
         </a>
       </li>
@@ -45,9 +47,10 @@
         <a
           pripple=""
           class="p-ripple p-element cursor-pointer h-full inline-flex align-items-center text-600 border-left-2 lg:border-left-none lg:border-bottom-2 border-transparent hover:border-500 transition-colors transition-duration-150 py-3 lg:py-0 px-3"
-        >
-          <span class="pi pi-home mr-2"></span>
-          <span class="font-medium">Stats</span>
+          (click)="goToProducts()"
+          >
+          <span class="pi pi-objects-column mr-2"></span>
+          <span class="font-medium">Products</span>
           <span class="p-ink"></span>
         </a>
       </li>
@@ -78,8 +81,18 @@
           pripple=""
           class="p-ripple p-element cursor-pointer h-full inline-flex align-items-center text-600 py-3 lg:py-0 px-3 border-left-2 lg:border-left-none lg:border-bottom-2 border-transparent hover:border-500 transition-colors transition-duration-150"
         >
-          <span class="pi pi-bell mr-2 lg:mr-0"></span>
-          <span class="font-medium inline lg:hidden">Notifications</span>
+          <span class="pi pi-heart mr-2 lg:mr-0"></span>
+          <span class="font-medium inline lg:hidden">Wish List</span>
+          <span class="p-ink"></span>
+        </a>
+      </li>
+      <li class="h-full">
+        <a
+          pripple=""
+          class="p-ripple p-element cursor-pointer h-full inline-flex align-items-center text-600 py-3 lg:py-0 px-3 border-left-2 lg:border-left-none lg:border-bottom-2 border-transparent hover:border-500 transition-colors transition-duration-150"
+        >
+          <span class="pi pi-shopping-cart mr-2 lg:mr-0"></span>
+          <span class="font-medium inline lg:hidden">Cart</span>
           <span class="p-ink"></span>
         </a>
       </li>

@@ -1,6 +1,7 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'lib-header',
@@ -10,6 +11,7 @@ import { ButtonModule } from 'primeng/button';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+  constructor(private router: Router) {}
   menuVisible = false;
   userMenuVisible = false;
   profileMenuVisible = false;
@@ -35,9 +37,24 @@ export class HeaderComponent {
     this.profileMenuVisible = false;
   }
 
+  goToFeatures() {
+    this.router.navigate(['/home']);
+  }
+
+  goToSale() {
+    this.router.navigate(['/products/sale']);
+  }
+
+  goToProducts() {
+    this.router.navigate(['/products']);
+  }
+
   @HostListener('document:click', ['$event'])
   onClick(event: Event) {
-    if (!this.profileMenu.nativeElement.contains(event.target) && !this.profileMenuContent.nativeElement.contains(event.target)) {
+    if (
+      !this.profileMenu.nativeElement.contains(event.target) &&
+      !this.profileMenuContent.nativeElement.contains(event.target)
+    ) {
       this.profileMenuVisible = false;
     }
   }
