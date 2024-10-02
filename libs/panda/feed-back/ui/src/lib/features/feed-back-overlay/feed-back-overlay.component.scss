@@ -1,0 +1,19 @@
+.feedback-ribbon {
+  background: rgb(0, 51, 102);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotateZ(180deg);
+  font-size: 15px;
+  z-index: 1000;
+  writing-mode: vertical-rl;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
