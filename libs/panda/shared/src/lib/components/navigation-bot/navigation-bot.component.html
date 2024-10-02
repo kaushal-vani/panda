@@ -1,1 +1,28 @@
-<p>navigation-bot works!</p>
+<p-dialog 
+  [(visible)]="isChatbotVisible" 
+  [modal]="true" 
+  [dismissableMask]="true" 
+  [closable]="true" 
+  [draggable]="false" 
+  [resizable]="false"
+  header="Chat with us"
+  [style]="{width: '300px'}"
+  (onHide)="closeChatbot()"
+>
+  <div class="chatbot-body">
+    <div class="message initial-message">{{ initialMessage }}</div>
+    <div class="message user-message" *ngFor="let msg of userMessages">{{ msg }}</div>
+    <div class="message bot-message" *ngFor="let msg of botMessages">{{ msg }}</div>
+  </div>
+  
+  <div class="chatbot-footer">
+    <div class="options">
+      <span *ngFor="let option of navigationOptions" 
+            (click)="selectOption(option.label)" 
+            class="option">{{ option.label }}</span>
+    </div>
+  </div>
+</p-dialog>
+
+<!-- Button to open the chatbot -->
+<button pButton type="button" icon="pi pi-compass" class="chatbot-button" (click)="toggleChatbot()"></button>
