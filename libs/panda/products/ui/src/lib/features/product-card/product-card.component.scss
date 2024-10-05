@@ -1,0 +1,69 @@
+/* Container for the product cards */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-resizes based on screen size */
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  p-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .tag {
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+    &.new {
+      background-color: #28a745;
+    }
+    &.sale {
+      background-color: #dc3545;
+    }
+  }
+  
+  .quantity-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  span {
+    font-size: 18px;
+    margin: 0 10px;
+  }
+  
+  /* Responsive behavior based on screen width */
+  @media screen and (max-width: 1200px) {
+    .product-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusts for smaller screens */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .product-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusts for tablets */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .product-grid {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjusts for mobile phones */
+    }
+  }

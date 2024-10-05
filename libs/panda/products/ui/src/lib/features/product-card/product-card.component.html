@@ -1,1 +1,18 @@
-<p>product-card works!</p>
+<p-card>
+    <div class="card-header">
+      <h3>{{ product.name }}</h3>
+      <span *ngIf="product.newArrival" class="tag new">New Arrival</span>
+      <span *ngIf="product.sale" class="tag sale">Sale</span>
+    </div>
+  
+    <div class="card-body">
+      <p>Price: {{ product.price | currency }}</p>
+      <p>Stock: {{ product.stock }} units</p>
+      
+      <div class="quantity-control">
+        <button pButton icon="pi pi-minus" (click)="decrement()" [disabled]="product.quantity === 0"></button>
+        <span>{{ product.quantity }}</span>
+        <button pButton icon="pi pi-plus" (click)="increment()" [disabled]="product.quantity === product.stock"></button>
+      </div>
+    </div>
+  </p-card>
