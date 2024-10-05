@@ -6,7 +6,6 @@ export * from './lib/enums/screen-view.enum';
 export * from './lib/models/screen-action.interfaces';
 
 /* Components */
-export * from './lib/components/cart-items/cart-items.component';
 export * from './lib/components/cookies/cookies.component';
 export * from './lib/components/footer/footer.component';
 export * from './lib/components/header/header.component';
