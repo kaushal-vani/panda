@@ -49,6 +49,10 @@ export class HeaderComponent {
     this.router.navigate(['/products']);
   }
 
+  goToWishList(){
+    this.router.navigate(['/wish-list'])
+  }
+
   @HostListener('document:click', ['$event'])
   onClick(event: Event) {
     if (
