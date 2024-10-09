@@ -1,1 +1,21 @@
-<p>cart-items works!</p>
+<p-dialog
+  [(visible)]="displayModal"
+  header="Cart Items"
+  [modal]="true"
+  [closable]="true"
+  [dismissableMask]="true"
+  [baseZIndex]="10000"
+  [style]="{ width: '350px' ,height: '50vh'}"
+  [styleClass]="'custom-vertical-modal'"
+>
+  <p>This is your content inside the modal.</p>
+</p-dialog>
+
+<!-- Trigger Icon -->
+<div class="floating-icon">
+  <i
+  class="pi pi-shopping-cart"
+  style="font-size: 1.2rem; cursor: pointer"
+    (click)="showModal()"
+  ></i>
+</div>

@@ -2,11 +2,12 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { Router } from '@angular/router';
+import { CartItemsComponent } from '../cart-items/cart-items.component';
 
 @Component({
   selector: 'lib-header',
   standalone: true,
-  imports: [CommonModule, ButtonModule],
+  imports: [CommonModule, ButtonModule, CartItemsComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })

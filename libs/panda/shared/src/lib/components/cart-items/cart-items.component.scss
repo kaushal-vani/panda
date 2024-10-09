@@ -1,0 +1,39 @@
+/* Modal for desktop screens (top-right corner) */
+.custom-vertical-modal {
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Floating icon at the bottom right corner */
+.floating-icon {
+  bottom: 20px;
+  right: 20px;
+  z-index: 10001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Center modal for mobile and tablet views */
+@media only screen and (max-width: 768px) {
+  .custom-vertical-modal {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 90% !important;
+    height: auto !important;
+  }
+}
+
+.p-dialog .p-dialog-header {
+  text-align: center;
+}
+
+.p-dialog .p-dialog-content {
+  padding: 1rem;
+}
